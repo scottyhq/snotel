@@ -1,0 +1,11 @@
+name: snotel
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - ulmo 
+  - geopandas 
+  - pyarrow 
+  - folium 
+  - ipykernel
+  - matplotlib-base
