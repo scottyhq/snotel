@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_043cf835bb8c94902d859b85a422d134 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+            <style> #vega_lite_15b3ee66f0f32aef733d779de995a058 {
+                position : relative;
+                width : 450.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    <script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_043cf835bb8c94902d859b85a422d134" ></div>
+        
+</body>
+<script>    
+    
+            var map_043cf835bb8c94902d859b85a422d134 = L.map(
+                "map_043cf835bb8c94902d859b85a422d134",
+                {
+                    center: [47.6062, -122.3321],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_043cf835bb8c94902d859b85a422d134);
+
+            
+
+        
+    
+            var tile_layer_bc1449f9cfe0cd082e5e4d492a341c64 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_043cf835bb8c94902d859b85a422d134);
+        
+    
+        function geo_json_6f075f21747db23a2a4586ad1676cd92_styler(feature) {
+            switch(feature.properties.code) {
+                default:
+                    return {"color": "cyan"};
+            }
+        }
+        function geo_json_6f075f21747db23a2a4586ad1676cd92_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3};
+            
+            let style = geo_json_6f075f21747db23a2a4586ad1676cd92_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.circle(latlng, opts)
+        }
+
+        function geo_json_6f075f21747db23a2a4586ad1676cd92_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6f075f21747db23a2a4586ad1676cd92 = L.geoJson(null, {
+                onEachFeature: geo_json_6f075f21747db23a2a4586ad1676cd92_onEachFeature,
+            
+                style: geo_json_6f075f21747db23a2a4586ad1676cd92_styler,
+                pointToLayer: geo_json_6f075f21747db23a2a4586ad1676cd92_pointToLayer
+        });
+
+        function geo_json_6f075f21747db23a2a4586ad1676cd92_add (data) {
+            geo_json_6f075f21747db23a2a4586ad1676cd92
+                .addData(data)
+                .addTo(map_043cf835bb8c94902d859b85a422d134);
+        }
+            $.ajax("https://raw.githubusercontent.com/scottyhq/snotel/main/301_CA_SNTL.geojson", {dataType: 'json', async: false})
+                .done(geo_json_6f075f21747db23a2a4586ad1676cd92_add);
+
+        
+    
+    geo_json_6f075f21747db23a2a4586ad1676cd92.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["code"];
+    let aliases = ["code"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+        var popup_926b7f4c1eb905bf91c9c7ee06d54abb = L.popup({"maxWidth": "100%"});
+
+        
+            var vega_lite_15b3ee66f0f32aef733d779de995a058 = $(`             <div id="vega_lite_15b3ee66f0f32aef733d779de995a058"></div>             `)[0];
+            popup_926b7f4c1eb905bf91c9c7ee06d54abb.setContent(vega_lite_15b3ee66f0f32aef733d779de995a058);
+        
+
+        geo_json_6f075f21747db23a2a4586ad1676cd92.bindPopup(popup_926b7f4c1eb905bf91c9c7ee06d54abb)
+        ;
+
+        
+            
+                    vegaEmbed(vega_lite_15b3ee66f0f32aef733d779de995a058, {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "301_CA_SNTL_slim.json"}, "mark": "line", "encoding": {"tooltip": [{"field": "datetime", "type": "temporal"}, {"field": "SNWD", "type": "quantitative"}], "x": {"field": "datetime", "type": "temporal"}, "y": {"field": "SNWD", "type": "quantitative"}}, "selection": {"selector014": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json"})
+                        .then(function(result) {})
+                        .catch(console.error);
+                
+        
+    
+    
+            var layer_control_1aeb6e70b33d64459779435dbd114ee0 = {
+                base_layers : {
+                    "stamenterrain" : tile_layer_bc1449f9cfe0cd082e5e4d492a341c64,
+                },
+                overlays :  {
+                    "snotel" : geo_json_6f075f21747db23a2a4586ad1676cd92,
+                },
+            };
+            L.control.layers(
+                layer_control_1aeb6e70b33d64459779435dbd114ee0.base_layers,
+                layer_control_1aeb6e70b33d64459779435dbd114ee0.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_043cf835bb8c94902d859b85a422d134);
+        
+</script>
