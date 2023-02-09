@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_043cf835bb8c94902d859b85a422d134 {
+                #map_21136cfddd3c95d7a17f5d91ccb7ed3c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -49,10 +49,26 @@
                     </style>
             
     
-            <style> #vega_lite_15b3ee66f0f32aef733d779de995a058 {
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+            <style> #vega_lite_b0e7d1c764b0a5c0cdc268a456d3f349 {
                 position : relative;
-                width : 450.0px;
-                height: 250.0px;
+                width : 600.0px;
+                height: 100.0%;
                 left: 0.0%;
                 top: 0.0%;
             </style>
@@ -63,13 +79,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_043cf835bb8c94902d859b85a422d134" ></div>
+            <div class="folium-map" id="map_21136cfddd3c95d7a17f5d91ccb7ed3c" ></div>
         
 </body>
 <script>    
     
-            var map_043cf835bb8c94902d859b85a422d134 = L.map(
-                "map_043cf835bb8c94902d859b85a422d134",
+            var map_21136cfddd3c95d7a17f5d91ccb7ed3c = L.map(
+                "map_21136cfddd3c95d7a17f5d91ccb7ed3c",
                 {
                     center: [47.6062, -122.3321],
                     crs: L.CRS.EPSG3857,
@@ -78,55 +94,57 @@
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_043cf835bb8c94902d859b85a422d134);
+            L.control.scale().addTo(map_21136cfddd3c95d7a17f5d91ccb7ed3c);
 
             
 
         
     
-            var tile_layer_bc1449f9cfe0cd082e5e4d492a341c64 = L.tileLayer(
+            var tile_layer_4358238e4dcb6c4fce761b6202a1959e = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
                 {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_043cf835bb8c94902d859b85a422d134);
+            ).addTo(map_21136cfddd3c95d7a17f5d91ccb7ed3c);
         
     
-        function geo_json_6f075f21747db23a2a4586ad1676cd92_styler(feature) {
+        function geo_json_437b4039113b0e1bfba207237e604b06_styler(feature) {
             switch(feature.properties.code) {
+                case "305_CO_SNTL": case "957_AK_SNTL": case "8082_UT_SNTL": case "251_ID_SNTL": case "1086_AK_SNTL": case "252_MT_SNTL": case "372_AZ_SNTL": case "253_MT_SNTL": case "247_CO_SNTL": case "397_WY_SNTL": case "1204_NV_SNTL": case "1209_NV_SNTL": case "421_WY_SNTL": case "1210_NV_SNTL": case "441_UT_SNTL": case "8011_WY_SNTL": case "960_AK_SNTL": case "1027_OR_SNTL": case "1026_OR_SNTL": case "1028_OR_SNTL": case "1022_OR_SNTL": case "1023_OR_SNTL": case "1029_OR_SNTL": case "1021_OR_SNTL": case "1020_OR_SNTL": case "995_WA_SNTL": case "994_WA_SNTL": case "1019_OR_SNTL": case "1018_OR_SNTL": case "1025_OR_SNTL": case "1024_OR_SNTL": case "1004_WA_SNTL": case "976_OR_SNTL": case "1071_AK_SNTL": case "961_AK_SNTL": case "257_NV_SNTL": case "962_AK_SNTL": case "248_CO_SNTL": case "991_WA_SNTL": case "259_OR_SNTL": case "968_AK_SNTL": case "266_WY_SNTL": case "1276_ID_SNTL": case "1211_NV_SNTL": case "1036_AK_SNTL": case "1063_AK_SNTL": case "201_AK_SNTL": case "261_UT_SNTL": case "598_WY_SNTL": case "1265_AK_SNTL": case "611_SD_SNTL": case "254_MT_SNTL": case "1191_AK_SNTL": case "1206_NV_SNTL": case "1064_AK_SNTL": case "630_WA_SNTL": case "262_WA_SNTL": case "1176_AK_SNTL": case "258_NV_SNTL": case "249_CO_SNTL": case "659_MT_SNTL": case "267_WY_SNTL": case "1037_AK_SNTL": case "996_WA_SNTL": case "678_NM_SNTL": case "986_AK_SNTL": case "685_CO_SNTL": case "263_WA_SNTL": case "1002_AK_SNTL": case "1177_AK_SNTL": case "1178_AK_SNTL": case "973_AK_SNTL": case "1183_AK_SNTL": case "922_NM_SNTL": case "1280_UT_SNTL": case "733_OR_SNTL": case "1128_CO_SNTL": case "734_WA_SNTL": case "1231_WA_SNTL": case "735_ID_SNTL": case "1068_WA_SNTL": case "1251_CO_SNTL": case "736_OR_SNTL": case "737_CO_SNTL": case "915_ID_SNTL": case "738_ID_SNTL": case "1038_ID_SNTL": case "739_CO_SNTL": case "740_ID_SNTL": case "741_ID_SNTL": case "742_UT_SNTL": case "743_OR_SNTL": case "744_NM_SNTL": case "1043_WA_SNTL": case "745_OR_SNTL": case "746_NV_SNTL": case "747_ID_SNTL": case "1060_CO_SNTL": case "748_WA_SNTL": case "749_ID_SNTL": case "751_WY_SNTL": case "752_ID_SNTL": case "753_MT_SNTL": case "754_MT_SNTL": case "1169_NM_SNTL": case "1034_NM_SNTL": case "755_NM_SNTL": case "756_OR_SNTL": case "757_NM_SNTL": case "1205_NV_SNTL": case "758_MT_SNTL": case "759_OR_SNTL": case "760_MT_SNTL": case "1257_WA_SNTL": case "912_WA_SNTL": case "255_MT_SNTL": case "1286_MT_SNTL": case "783_MT_SNTL": case "761_ID_SNTL": case "762_CO_SNTL": case "926_ID_SNTL": case "763_UT_SNTL": case "1167_OR_SNTL": case "764_WY_SNTL": case "765_WY_SNTL": case "767_OR_SNTL": case "766_UT_SNTL": case "927_AZ_SNTL": case "1208_NV_SNTL": case "1132_WY_SNTL": case "769_ID_SNTL": case "770_ID_SNTL": case "771_CA_SNTL": case "985_WA_SNTL": case "268_WY_SNTL": case "1203_NV_SNTL": case "1157_WA_SNTL": case "264_WA_SNTL": case "799_AZ_SNTL": case "1095_AK_SNTL": case "256_MT_SNTL": case "1202_NV_SNTL": case "269_WY_SNTL": case "1007_OR_SNTL": case "250_CO_SNTL": case "851_WY_SNTL": case "246_CA_SNTL": case "1213_NV_SNTL": 
+                    return {"color": "magenta"};
                 default:
                     return {"color": "cyan"};
             }
         }
-        function geo_json_6f075f21747db23a2a4586ad1676cd92_pointToLayer(feature, latlng) {
+        function geo_json_437b4039113b0e1bfba207237e604b06_pointToLayer(feature, latlng) {
             var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3};
             
-            let style = geo_json_6f075f21747db23a2a4586ad1676cd92_styler(feature)
+            let style = geo_json_437b4039113b0e1bfba207237e604b06_styler(feature)
             Object.assign(opts, style)
             
             return new L.circle(latlng, opts)
         }
 
-        function geo_json_6f075f21747db23a2a4586ad1676cd92_onEachFeature(feature, layer) {
+        function geo_json_437b4039113b0e1bfba207237e604b06_onEachFeature(feature, layer) {
             layer.on({
             });
         };
-        var geo_json_6f075f21747db23a2a4586ad1676cd92 = L.geoJson(null, {
-                onEachFeature: geo_json_6f075f21747db23a2a4586ad1676cd92_onEachFeature,
+        var geo_json_437b4039113b0e1bfba207237e604b06 = L.geoJson(null, {
+                onEachFeature: geo_json_437b4039113b0e1bfba207237e604b06_onEachFeature,
             
-                style: geo_json_6f075f21747db23a2a4586ad1676cd92_styler,
-                pointToLayer: geo_json_6f075f21747db23a2a4586ad1676cd92_pointToLayer
+                style: geo_json_437b4039113b0e1bfba207237e604b06_styler,
+                pointToLayer: geo_json_437b4039113b0e1bfba207237e604b06_pointToLayer
         });
 
-        function geo_json_6f075f21747db23a2a4586ad1676cd92_add (data) {
-            geo_json_6f075f21747db23a2a4586ad1676cd92
+        function geo_json_437b4039113b0e1bfba207237e604b06_add (data) {
+            geo_json_437b4039113b0e1bfba207237e604b06
                 .addData(data)
-                .addTo(map_043cf835bb8c94902d859b85a422d134);
+                .addTo(map_21136cfddd3c95d7a17f5d91ccb7ed3c);
         }
-            $.ajax("https://raw.githubusercontent.com/scottyhq/snotel/main/301_CA_SNTL.geojson", {dataType: 'json', async: false})
-                .done(geo_json_6f075f21747db23a2a4586ad1676cd92_add);
+            $.ajax("./snotel-sites.geojson", {dataType: 'json', async: false})
+                .done(geo_json_437b4039113b0e1bfba207237e604b06_add);
 
         
     
-    geo_json_6f075f21747db23a2a4586ad1676cd92.bindTooltip(
+    geo_json_437b4039113b0e1bfba207237e604b06.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -148,37 +166,67 @@
     ,{"className": "foliumtooltip", "sticky": true});
                      
     
-        var popup_926b7f4c1eb905bf91c9c7ee06d54abb = L.popup({"maxWidth": "100%"});
+    geo_json_437b4039113b0e1bfba207237e604b06.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["code", "name", "elevation_m", "latitude", "longitude", "county", "state", "beginDate", "endDate", "isActive", "mgrs", "timeseries"];
+    let aliases = ["code", "name", "elevation_m", "latitude", "longitude", "county", "state", "beginDate", "endDate", "isActive", "mgrs", "timeseries"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+    
+            var marker_e80d2d0506aa4012877b6df56b6a0207 = L.marker(
+                [45.21328, -117.192581],
+                {}
+            ).addTo(map_21136cfddd3c95d7a17f5d91ccb7ed3c);
+        
+    
+        var popup_6b0e0e97303a1de45fee86ea3dc52906 = L.popup({"maxWidth": "100%"});
 
         
-            var vega_lite_15b3ee66f0f32aef733d779de995a058 = $(`             <div id="vega_lite_15b3ee66f0f32aef733d779de995a058"></div>             `)[0];
-            popup_926b7f4c1eb905bf91c9c7ee06d54abb.setContent(vega_lite_15b3ee66f0f32aef733d779de995a058);
+            var vega_lite_b0e7d1c764b0a5c0cdc268a456d3f349 = $(`             <div id="vega_lite_b0e7d1c764b0a5c0cdc268a456d3f349"></div>             `)[0];
+            popup_6b0e0e97303a1de45fee86ea3dc52906.setContent(vega_lite_b0e7d1c764b0a5c0cdc268a456d3f349);
         
 
-        geo_json_6f075f21747db23a2a4586ad1676cd92.bindPopup(popup_926b7f4c1eb905bf91c9c7ee06d54abb)
+        marker_e80d2d0506aa4012877b6df56b6a0207.bindPopup(popup_6b0e0e97303a1de45fee86ea3dc52906)
         ;
 
         
             
-                    vegaEmbed(vega_lite_15b3ee66f0f32aef733d779de995a058, {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "301_CA_SNTL_slim.json"}, "mark": "line", "encoding": {"tooltip": [{"field": "datetime", "type": "temporal"}, {"field": "SNWD", "type": "quantitative"}], "x": {"field": "datetime", "type": "temporal"}, "y": {"field": "SNWD", "type": "quantitative"}}, "selection": {"selector014": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json"})
+                    vegaEmbed(vega_lite_b0e7d1c764b0a5c0cdc268a456d3f349, {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "./json/302_OR_SNTL.json"}, "mark": "line", "encoding": {"color": {"field": "variable", "type": "nominal"}, "tooltip": [{"field": "datetime", "type": "temporal"}, {"field": "SNWD", "type": "quantitative"}, {"field": "WTEQ", "type": "quantitative"}], "x": {"field": "datetime", "type": "temporal"}, "y": {"field": "depth, swe (m)", "type": "quantitative"}}, "title": "302_OR_SNTL", "transform": [{"fold": ["SNWD", "WTEQ"], "as": ["variable", "depth, swe (m)"]}], "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json"})
                         .then(function(result) {})
                         .catch(console.error);
                 
         
     
     
-            var layer_control_1aeb6e70b33d64459779435dbd114ee0 = {
+            var layer_control_f9e1f853537c9bcace97e292cdd4c303 = {
                 base_layers : {
-                    "stamenterrain" : tile_layer_bc1449f9cfe0cd082e5e4d492a341c64,
+                    "stamenterrain" : tile_layer_4358238e4dcb6c4fce761b6202a1959e,
                 },
                 overlays :  {
-                    "snotel" : geo_json_6f075f21747db23a2a4586ad1676cd92,
+                    "snotel" : geo_json_437b4039113b0e1bfba207237e604b06,
                 },
             };
             L.control.layers(
-                layer_control_1aeb6e70b33d64459779435dbd114ee0.base_layers,
-                layer_control_1aeb6e70b33d64459779435dbd114ee0.overlays,
+                layer_control_f9e1f853537c9bcace97e292cdd4c303.base_layers,
+                layer_control_f9e1f853537c9bcace97e292cdd4c303.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_043cf835bb8c94902d859b85a422d134);
+            ).addTo(map_21136cfddd3c95d7a17f5d91ccb7ed3c);
         
 </script>
